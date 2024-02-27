@@ -1,0 +1,27 @@
+div.scrollmenu {
+    background-color: #333;
+    /* overflow: auto; */
+    /* white-space: nowrap; */
+   text-align: center;
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+    padding: 40px;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+  div.scrollmenu button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+  
