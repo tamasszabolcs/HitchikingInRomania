@@ -1,0 +1,54 @@
+
+body{
+    background-color: violet;
+    
+}
+*{
+    box-sizing: border-box;
+}
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 500px;
+    
+    
+}
+.column h1{
+    margin-left: 35px;
+}
+.column .pos_center{
+   margin-left: 160px;
+}
+.column .pos_center2{
+    margin-left: 160px;
+    margin-top: 150px;
+}
+.form-group input,button{
+      margin-left: 35px; 
+    width: 50%;
+  padding: 12px 20px;
+  display: block; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+   box-sizing: border-box; 
+}
+.form-group button{
+    margin-top: 20px;
+}
+.form-group label{
+    margin-left: 35px;
+}
+.form-group a:link{
+    text-decoration: none;
+}
+.role_span{
+    margin-left: 35px;
+}
+
+  
