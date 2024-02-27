@@ -1,0 +1,79 @@
+div.scrollmenu {
+    background-color: #333;
+    /* overflow: auto; */
+    /* white-space: nowrap; */
+   text-align: center;
+   /* margin: -8px; */
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+    padding: 40px;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+  div.scrollmenu button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+table{
+    width: 100%;
+    /* margin: 30px auto; */
+    border-collapse: collapse;
+}
+tr{
+    border-bottom: 1px solid #cbcbcb;
+}
+tr:hover{
+    background: #E9E9E9;
+}
+th{
+    font-size: 20px;
+    color: #688E23;
+    width: 100px;
+}
+/* th,td{
+    border: none;
+    height: 30px;
+    padding: 2px;
+} */
+table, th, td {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid black;
+   
+  }
+  table {
+    border-spacing: 15px;
+  }
+form{
+    width: 50%;
+    margin: 30px auto;
+    border-radius: 5px;
+    padding: 10px;
+    background: #FFF8DC;
+    border: 1px solid #6B8E23;
+}
+.task_input{
+    width: 70%;
+    height: 15px;
+    padding: 10px;
+    border: 2px solid #6B8E23;
+}
+.search_button{
+    height: 40px;
+    background: #FFF8DC;
+    color: #6B8E23;
+    border: 2px solid #6B8E23;
+    border-radius: 5px;
+    padding: 5px 20px;
+}

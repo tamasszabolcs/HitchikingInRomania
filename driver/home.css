@@ -1,0 +1,42 @@
+div.scrollmenu {
+    background-color: #333;
+    /* overflow: auto; */
+    /* white-space: nowrap; */
+   text-align: center;
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+    padding: 40px;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+  div.scrollmenu button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+  
+  .container {
+    position: relative;
+    text-align: center;
+    color:rgb(146, 72, 45);
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier New', monospace; 
+  }
+  .top_center {
+    position: absolute;
+    font-size: 57px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
