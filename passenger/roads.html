@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoppos applikacio</title>
+    <link rel="stylesheet" type="text/css" href="roads.css">
+</head>
+<body>
+    
+    <div class="scrollmenu">
+        <button type="submit" id="home" >
+            <a href="home.html">
+                HOME
+            </a>
+        </button>
+        <button type="submit" id="about_us" >
+            <a href="about_us.html">
+                ABOUT US
+            </a>
+        </button>
+       
+        <button type="submit" id="roads" >
+            <a href="roads.html">
+                ROADS
+            </a>
+        </button>
+      </div>
+
+      <form method="post" action="roads.php">
+          <input type="text" name="task" class="task_input">
+          <button type="submit" class="search_button" name="submit">Search Roads</button>
+      </form>
+        
+    <table>
+        <thead>
+            <tr>
+                <th>Driver Name</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Price</th>
+                <th>Places</th>
+                <th>Subscribe</th>
+            </tr>
+        </thead>
+    </table>
+    
+  
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoppos applikacio</title>
+    <link rel="stylesheet" type="text/css" href="travelling.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+var citiesByState = {
+Alba: ["Aiud","Blaj","Sebes","Alba Iulia"],
+Arad: ["Arad","Ineu","Nadlac"],
+Arges: ["Campulung","Mioveni","Pitesti"],
+Bacau: ["Bacau","Comanesti","Onesti"],
+Bihor: ["Beius","Marghita","Salonta","Oradea"],
+BistritaNasaud: ["Bistrita","Beclean","Nasaud"],
+Botosani: ["Botosani","Dorohoi","Saveni"],
+Brasov: ["Brasov","Fagaras","Predeal"],
+Braila: ["Braila","Faurei","Ianca"],
+Buzau: ["Buzau","Nehoiu","Ramnicu Sarat"],
+CarasSeverin: ["Caransebes","Oravita","Resita"],
+Calarasi: ["Budesti","Calarasi","Oltenita"],
+Cluj: ["Cluj-Napoca","Dej","Turda"],
+Constanta: ["Constanta","Mangalia","Medgidia"],
+Covasna: ["Baraolt","Covasna","Sfantu Gheorghe"],
+Dambovita: ["Moreni","Racari","Targoviste"],
+Dolj: ["Bailesti","Calafat","Craiova"],
+Galati: ["Beresti","Galati","Tecuci"],
+Giurgiu: ["Bolintin-Vale","Mihailesti","Giurgiu"],
+Gorj: ["Motru","Rovinari","Targu Jiu"],
+Harghita: ["Gheorgheni","Miercurea Ciuc","Odorhei"],
+Hunedoara: ["Brad","Deva","Hunedoara"],
+Ialomita: ["Amara","Fetesti","Slobozia"],
+Iasi: ["Harlau","Iasi","Pascani"],
+Ilfov: ["Bucuresti","Buftea","Voluntari"],
+Maramures: ["Baia Mare","Borsa","Viseu de Sus"],
+Mehedinti: ["Drobeta-Turnu-Severin","Orsova","Strehaia"],
+Mures: ["Reghin","Sighisoara","Targu Mures"],
+Neamt: ["Piatra Neamt","Roman","Targu-Neamt"],
+Olt: ["Bals","Caracal","Slatina"],
+Prahova: ["Busteni","Ploiesti","Sinaia"],
+SatuMare: ["Carei","Satu Mare","Tasnad"],
+Salaj: ["Jibou","Simleu Silvaniei","Zalau"],
+Sibiu: ["Dumbraveni","Medias","Sibiu"],
+Suceava: ["Campulunk Moldovenesc","Radauti","Suceava"],
+Teleorman: ["Alexandria","Turnu Magurele","Videle"],
+Timis: ["Lugoj","Sannicolae Mare","Timisoara"],
+Tulcea: ["Babadag","Macin","Tulcea"],
+Vaslui: ["Barlad","Husi","Vaslui"],
+Valcea: ["Babeni","Dragasani","Ramnicu Valcea"],
+Vrancea: ["Focsani","Marasesti","Odobesti"]
+
+}
+function makeSubmenu(value) {
+    if(value.length==0) document.getElementById("citySelect").innerHTML = "<option></option>";
+    else {
+        var citiesOptions = "";
+        for(cityId in citiesByState[value]) {
+        citiesOptions+="<option>"+citiesByState[value][cityId]+"</option>";
+        }
+        document.getElementById("citySelect").innerHTML = citiesOptions;
+    }
+}
+function makeSubmenu2(value) {
+    if(value.length==0) document.getElementById("citySelect2").innerHTML = "<option></option>";
+    else {
+        var citiesOptions = "";
+        for(cityId in citiesByState[value]) {
+        citiesOptions+="<option>"+citiesByState[value][cityId]+"</option>";
+        }
+        document.getElementById("citySelect2").innerHTML = citiesOptions;
+    }
+}
+
+function displaySelected() { var country = document.getElementById("countrySelect").value;
+var city = document.getElementById("citySelect").value;
+alert(country+"\n"+city);
+}
+function resetSelection() {
+document.getElementById("countrySelect").selectedIndex = 0;
+document.getElementById("citySelect").selectedIndex = 0;
+}
+</script>
+</head>
+<body>
+   
+    <div class="scrollmenu">
+        <button type="submit" id="home" >
+            <a href="home.html">
+                HOME
+            </a>
+        </button>
+        <button type="submit" id="about_us" >
+            <a href="about_us.html">
+                ABOUT US
+            </a>
+        </button>
+        <button type="submit" id="travelling" >
+            <a href="travelling.html">
+                I WANT TO TRAVEL
+            </a>
+        </button>
+        <button type="submit" id="roads" >
+            <a href="roads.html">
+                ROADS
+            </a>
+        </button>
+      </div>
+    <div class="column" style="background-color:#aaa;">
+        <div class="pos_center">
+            <div class="form_driver">
+                <span>
+                FROM 
+                </span>
+            <select id="countrySelect" size="1" onchange="makeSubmenu(this.value)">
+            <option value="" disabled selected>Choose State</option>
+            <option>Alba</option>
+            <option>Arad</option>
+            <option>Arges</option>
+            <option>Bacau</option>
+            <option>Bihor</option>
+            <option>Bistrita-Nasaud</option>
+            <option>Botosani</option>
+            <option>Brasov</option>
+            <option>Braila</option>
+            <option>Buzau</option>
+            <option>Caras-Severin</option>
+            <option>Calarasi</option>
+            <option>Cluj</option>
+            <option>Constanta</option>
+            <option>Covasna</option>
+            <option>Dambovita</option>
+            <option>Dolj</option>
+            <option>Galati</option>
+            <option>Giurgiu</option>
+            <option>Gorj</option>
+            <option>Harghita</option>
+            <option>Hunedoara</option>
+            <option>Ialomita</option>
+            <option>Iasi</option>
+            <option>Ilfov</option>
+            <option>Maramures</option>
+            <option>Mehedinti</option>
+            <option>Mures</option>
+            <option>Neamt</option>
+            <option>Olt</option>
+            <option>Prahova</option>
+            <option>Satu Mare</option>
+            <option>Salaj</option>
+            <option>Sibiu</option>
+            <option>Suceava</option>
+            <option>Teleorman</option>
+            <option>Timis</option>
+            <option>Tulcea</option>
+            <option>Vaslui</option>
+            <option>Valcea</option>
+            <option>Vrancea</option>
+
+            </select>
+            <select id="citySelect" size="1" >
+            <option value="" disabled selected>Choose City</option>
+            <option></option>
+            </select>
+            <!-- <button onclick="displaySelected()">show selected</button> -->
+        </div>
+        <div class="form_driver">
+            <span>
+            TO 
+            </span>
+        <select id="countrySelect" size="1" onchange="makeSubmenu2(this.value)">
+        <option value="" disabled selected>Choose State</option>
+        <option>Alba</option>
+            <option>Arad</option>
+            <option>Arges</option>
+            <option>Bacau</option>
+            <option>Bihor</option>
+            <option>Bistrita-Nasaud</option>
+            <option>Botosani</option>
+            <option>Brasov</option>
+            <option>Braila</option>
+            <option>Buzau</option>
+            <option>Caras-Severin</option>
+            <option>Calarasi</option>
+            <option>Cluj</option>
+            <option>Constanta</option>
+            <option>Covasna</option>
+            <option>Dambovita</option>
+            <option>Dolj</option>
+            <option>Galati</option>
+            <option>Giurgiu</option>
+            <option>Gorj</option>
+            <option>Harghita</option>
+            <option>Hunedoara</option>
+            <option>Ialomita</option>
+            <option>Iasi</option>
+            <option>Ilfov</option>
+            <option>Maramures</option>
+            <option>Mehedinti</option>
+            <option>Mures</option>
+            <option>Neamt</option>
+            <option>Olt</option>
+            <option>Prahova</option>
+            <option>Satu Mare</option>
+            <option>Salaj</option>
+            <option>Sibiu</option>
+            <option>Suceava</option>
+            <option>Teleorman</option>
+            <option>Timis</option>
+            <option>Tulcea</option>
+            <option>Vaslui</option>
+            <option>Valcea</option>
+            <option>Vrancea</option>
+        </select>
+        <select id="citySelect2" size="1" >
+        <option value="" disabled selected>Choose City</option>
+        <option></option>
+        </select>
+        <!-- <button onclick="displaySelected()">show selected</button> -->
+    </div>
+        <div class="form-group">
+            <label>Date:</label>
+            <input type="date" name="date" id="date"  required />
+            
+            <br>
+        </div>
+        <div class="form-group">
+            <label>Time:</label>
+            <input type="time" name="time" id="time"  required /> 
+            
+            <br>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="sbm" onclick="RegisterInfo()" >Submit</button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
